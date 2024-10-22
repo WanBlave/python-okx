@@ -7,10 +7,12 @@ from okx import Account
 
 class AccountTest(unittest.TestCase):
     def setUp(self):
-        api_key = '52049394-3c72-4c06-8d87-d6399450c264'
-        api_secret_key = 'E532EB5AF81E6E50A2875225FEDC9150'
-        passphrase = 'Fixedloan2024!'
-        self.AccountAPI = Account.AccountAPI(api_key, api_secret_key, passphrase, flag='1')
+        api_key = "52049394-3c72-4c06-8d87-d6399450c264"
+        api_secret_key = "E532EB5AF81E6E50A2875225FEDC9150"
+        passphrase = "Fixedloan2024!"
+        self.AccountAPI = Account.AccountAPI(
+            api_key, api_secret_key, passphrase, flag="1"
+        )
 
     # '''
     # POSITIONS_HISTORY = '/api/v5/account/positions-history' #need add
@@ -140,5 +142,6 @@ class AccountTest(unittest.TestCase):
     # def test_get_fix_loan_borrowing_orders_list(self):
     #     logger.debug(self.AccountAPI.get_fix_loan_borrowing_orders_list(ordId="2407301054407907"))
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
